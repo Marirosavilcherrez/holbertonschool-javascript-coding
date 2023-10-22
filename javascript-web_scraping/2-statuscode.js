@@ -5,7 +5,7 @@ const request = require('request');
 
 const getURL = process.argv[2];
 
-request(getURL, (error, response) => { //configure the request
+request(getURL, (error, response) => { // configure the request
   if (error) {
     console.error('Error');
   } else {
