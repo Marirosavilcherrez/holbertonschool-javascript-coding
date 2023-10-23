@@ -15,7 +15,6 @@ request(firstArgUrl, (error, response, body) => { // configure the request
       if (err) {
         console.error('Error', err);
       } else {
-        ;
       }
     });
   } else {
