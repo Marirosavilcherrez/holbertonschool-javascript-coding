@@ -3,22 +3,22 @@
 /* Script that gets the contents of a webpage and store */
 
 const request = require('request');
-const fs = require('fs')
+const fs = require('fs');
 
 const firstArgUrl = process.argv[2];
 const secondArgFile = process.argv[3];
 
-request(firstArgUrl, (error, response, body) => {  //configure the request
+request(firstArgUrl, (error, response, body) => { //configure the request
   if (!error && response.statusCode === 200) {
     // Guarda el contenido de la página web en un archivo
     fs.writeFile(secondArgFile, body, (err) => {
-    if (err) {
-      console.error('Error', err);
-    } else {
-      return;
-    }
+      if (err) {
+        console.error('Error', err);
+      } else {
+        return;
+      }
     });
-    } else {
-      console.error('Error', error);
-    }
+  } else {
+    console.error('Error', error);
+  }
 });
