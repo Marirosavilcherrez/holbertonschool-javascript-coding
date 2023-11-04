@@ -1,7 +1,7 @@
 /* Create a function that prints in STDOUT the string argument */
 
 function displayMessage(text) {
-    process.stdout.write(text);
+    console.log(text);
 };
 
 module.exports = displayMessage; 
