@@ -24,6 +24,7 @@ function countStudents(path) {
     //Filter the lines with field SWE
     const filteredLinesSwe = lines.filter(line => line[3] === 'SWE');
     //Firstnames of the FilteresLines
+
     LIST_OF_FIRSTNAMES = filteredLinesSwe.map(line => line[0]).join(', ');
     console.log(`Number of students in SWE: 4. List: ${LIST_OF_FIRSTNAMES}`); 
   });
