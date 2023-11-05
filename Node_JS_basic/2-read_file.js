@@ -26,7 +26,7 @@ function countStudents(path) {
 
     console.log(`Number of students: ${NUMBER_OF_STUDENTS}`)
     console.log(`Number of students in CS: 6. List: ${LIST_OF_FIRSTNAMES}`);
-    console.log(`Number of students in SWE: 6. List: ${LIST_OF_FIRSTNAME}`);
+    console.log(`Number of students in SWE: 4. List: ${LIST_OF_FIRSTNAME}`);
   });
 }
 module.exports = countStudents;
