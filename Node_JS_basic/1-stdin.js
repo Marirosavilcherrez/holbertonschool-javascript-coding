@@ -9,5 +9,5 @@ process.stdin.on('data', (name) => {
   process.stdin.end(); // close the standard
 });
 
-process.stdin.on('end', () => {  
+process.stdin.on('end', () => {
 });
