@@ -25,7 +25,7 @@ function countStudents(path) {
     const LIST_OF_FIRSTNAME = filteredLinesSwe.map(line => line[0]).join(', ');
 
     console.log(`Number of students: ${NUMBER_OF_STUDENTS}`)
-    console.log(`Number of students in FIELD: 6. List: ${LIST_OF_FIRSTNAMES}`);
+    console.log(`Number of students in CS: 6. List: ${LIST_OF_FIRSTNAMES}`);
     console.log(`Number of students in SWE: 6. List: ${LIST_OF_FIRSTNAME}`);
   });
 }
