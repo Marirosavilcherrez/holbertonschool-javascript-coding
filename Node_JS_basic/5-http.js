@@ -7,14 +7,20 @@ const port = 1245;
 
 const app = http.createServer((req, res) => {
   if(req.url === '/') {
-    res.writeHead = (200, {'Content-Type': 'text/plain'});
+    res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
-    const data = countStudents(process.argv[2]);
-    res.writeHead = (200, {'Content-Type': 'text/plain'});
-    res.end(`This is the list of our students: ${data}`);
+    countStudents(process.argv[2], (error, data) => {
+      if (error) {
+        res.writeHead(500, { 'Content-Type': 'text/plain' });
+        res.end('Internal Server Error');
+      } else {
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end(`This is the list of our students: ${data}`);
+      }
+    });
   } else {
-    res.writeHead = (400, {'Content-Type': 'text/plain'});
+    res.writeHead(400, {'Content-Type': 'text/plain'});
     res.end('Not Found');
   }
 });
